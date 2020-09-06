@@ -40,6 +40,7 @@
 		BE78D2292502F78500472BF1 /* SeeBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeeBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE78D22D2502F78500472BF1 /* SeeBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeBooksTests.swift; sourceTree = "<group>"; };
 		BE78D22F2502F78500472BF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEA06BF2250593D4006CF12E /* SeeBooks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SeeBooks.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 		BE78D2122502F78200472BF1 /* SeeBooks */ = {
 			isa = PBXGroup;
 			children = (
+				BEA06BF2250593D4006CF12E /* SeeBooks.entitlements */,
 				BE78D2132502F78200472BF1 /* AppDelegate.swift */,
 				BE78D2152502F78200472BF1 /* SceneDelegate.swift */,
 				BE78D2172502F78200472BF1 /* ViewController.swift */,
@@ -366,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SeeBooks/SeeBooks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UHTKY94VRM;
 				INFOPLIST_FILE = SeeBooks/Info.plist;
@@ -375,6 +378,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CasaAzul.SeeBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -384,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SeeBooks/SeeBooks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UHTKY94VRM;
 				INFOPLIST_FILE = SeeBooks/Info.plist;
@@ -393,6 +398,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CasaAzul.SeeBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
