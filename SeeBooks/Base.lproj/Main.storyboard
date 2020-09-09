@@ -51,6 +51,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="0zy-Jk-Pnt" id="xTS-gz-EZL"/>
+                        <outlet property="lblResult" destination="JHG-so-600" id="Mek-Zm-HGd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE724CF82509855C00D06651 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BE724CF72509855C00D06651 /* Inceptionv3.mlmodel */; };
 		BE78D2142502F78200472BF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE78D2132502F78200472BF1 /* AppDelegate.swift */; };
 		BE78D2162502F78200472BF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE78D2152502F78200472BF1 /* SceneDelegate.swift */; };
 		BE78D2182502F78200472BF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE78D2172502F78200472BF1 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE724CF72509855C00D06651 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		BE78D2102502F78200472BF1 /* SeeBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE78D2132502F78200472BF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE78D2152502F78200472BF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +42,6 @@
 		BE78D2292502F78500472BF1 /* SeeBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeeBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE78D22D2502F78500472BF1 /* SeeBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeBooksTests.swift; sourceTree = "<group>"; };
 		BE78D22F2502F78500472BF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE91EB5A2506E0FA00F348B6 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		BEA06BF2250593D4006CF12E /* SeeBooks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SeeBooks.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +84,7 @@
 		BE78D2122502F78200472BF1 /* SeeBooks */ = {
 			isa = PBXGroup;
 			children = (
-				BE91EB5A2506E0FA00F348B6 /* Inceptionv3.mlmodel */,
+				BE724CF72509855C00D06651 /* Inceptionv3.mlmodel */,
 				BEA06BF2250593D4006CF12E /* SeeBooks.entitlements */,
 				BE78D2132502F78200472BF1 /* AppDelegate.swift */,
 				BE78D2152502F78200472BF1 /* SceneDelegate.swift */,
@@ -207,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE724CF82509855C00D06651 /* Inceptionv3.mlmodel in Sources */,
 				BE78D21E2502F78200472BF1 /* SeeBooks.xcdatamodeld in Sources */,
 				BE78D2182502F78200472BF1 /* ViewController.swift in Sources */,
 				BE78D2142502F78200472BF1 /* AppDelegate.swift in Sources */,

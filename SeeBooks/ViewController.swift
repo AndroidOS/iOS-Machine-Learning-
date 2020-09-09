@@ -12,8 +12,10 @@ import Vision
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
+    @IBOutlet weak var lblResult: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
+    var classificationResults : [VNClassificationObservation] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       
     }
     
+    func detect(image: CIImage) { //
+    
+    // Load the ML model through its generated class
+        
+    guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
+        fatalError("can't load ML model")
+    }
+    
+    let request = VNCoreMLRequest(model: model) { request, error in
+        guard let results = request.results as? [VNClassificationObservation],
+            let topResult = results.first
+            else {
+                fatalError("unexpected result type from VNCoreMLRequest")
+        }
+       
+        
+        }
+         
+
+    }//
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
                    
@@ -29,11 +52,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                    guard let ciImage = CIImage(image: image) else {
                        fatalError("couldn't convert uiimage to CIImage")
                    }
-                   
+                   detect(image: ciImage)
                }
         
-    }
-
+//    }
+    }//
+    
     @IBAction func btnGetPhoto(_ sender: UIBarButtonItem) {
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
@@ -42,4 +66,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
 
 }
+
 
