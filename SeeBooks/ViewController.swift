@@ -25,23 +25,38 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func detect(image: CIImage) { //
     
-    // Load the ML model through its generated class
-        
     guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
         fatalError("can't load ML model")
     }
-    
+    print("model loaded")
+        
     let request = VNCoreMLRequest(model: model) { request, error in
         guard let results = request.results as? [VNClassificationObservation],
             let topResult = results.first
             else {
                 fatalError("unexpected result type from VNCoreMLRequest")
         }
-       
+        
+       print("\(topResult)")
+            print("detect ")
+            self.classificationResults = results
+        DispatchQueue.main.async {
+            self.navigationItem.title = "Not Hotdog!"
+            
         
         }
-         
-
+      
+    }
+        let handler = VNImageRequestHandler(ciImage: image)
+        
+        do {
+            try handler.perform([request])
+        }
+        catch {
+            print(error)
+        }
+       
+            print("\(self.classificationResults)")
     }//
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -52,10 +67,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                    guard let ciImage = CIImage(image: image) else {
                        fatalError("couldn't convert uiimage to CIImage")
                    }
+                    print("detect called")
                    detect(image: ciImage)
                }
         
-//    }
     }//
     
     @IBAction func btnGetPhoto(_ sender: UIBarButtonItem) {
