@@ -41,8 +41,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print("detect ")
             self.classificationResults = results
         DispatchQueue.main.async {
-            self.navigationItem.title = "Not Hotdog!"
-            
+            self.navigationItem.title = "Results"
+            self.lblResult.text = "\(results[0].identifier)"
         
         }
       
