@@ -42,7 +42,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.classificationResults = results
         DispatchQueue.main.async {
             self.navigationItem.title = "Results"
-            self.lblResult.text = "\(results[0].identifier)"
+            self.lblResult.text = "\(results[0].identifier)\n\(results[1].identifier)\n\(results[2].identifier)\n"
         
         }
       

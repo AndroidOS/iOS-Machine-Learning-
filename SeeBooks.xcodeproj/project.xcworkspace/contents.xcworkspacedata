@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/manuelcarvalho/Desktop/iOS/SeeBooks/SeeBooks/Inceptionv3.mlmodel">
+   </FileRef>
+   <FileRef
       location = "self:SeeBooks.xcodeproj">
    </FileRef>
 </Workspace>
