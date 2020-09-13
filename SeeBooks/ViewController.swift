@@ -14,6 +14,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var lblResult: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     let imagePicker = UIImagePickerController()
     var classificationResults : [VNClassificationObservation] = []
 
@@ -23,7 +25,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       
     }
     
-    func detect(image: CIImage) { //
+    func detect(image: CIImage){ //
     
     guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
         fatalError("can't load ML model")
@@ -43,7 +45,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         DispatchQueue.main.async {
             self.navigationItem.title = "Results"
             self.lblResult.text = "\(results[0].identifier)\n\(results[1].identifier)\n\(results[2].identifier)\n"
-        
+
         }
       
     }
@@ -57,17 +59,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
        
             print("\(self.classificationResults)")
+        
     }//
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
                    
                    imageView.image = image
-                   imagePicker.dismiss(animated: true, completion: nil)
+                   //imagePicker.dismiss(animated: true, completion: nil)
                    guard let ciImage = CIImage(image: image) else {
                        fatalError("couldn't convert uiimage to CIImage")
                    }
                     print("detect called")
+                    imagePicker.dismiss(animated: true, completion: nil)
                    detect(image: ciImage)
                }
         
