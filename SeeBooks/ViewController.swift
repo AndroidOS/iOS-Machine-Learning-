@@ -86,6 +86,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
 
+    @IBAction func btnShare(_ sender: UIBarButtonItem) {
+        print("Share Button pressed")
+    }
 }
 
 

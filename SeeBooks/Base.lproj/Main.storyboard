@@ -49,11 +49,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="v2c-wV-SVM">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera" catalog="system" id="fji-QY-apy">
-                            <connections>
-                                <action selector="btnGetPhoto:" destination="BYZ-38-t0r" id="E4P-pG-hTM"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="camera" catalog="system" id="fji-QY-apy">
+                                <connections>
+                                    <action selector="btnGetPhoto:" destination="BYZ-38-t0r" id="E4P-pG-hTM"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="CGa-tj-wlz">
+                                <connections>
+                                    <action selector="btnShare:" destination="BYZ-38-t0r" id="WiV-iX-yU4"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="pRy-BR-UnH" id="2dc-Vx-otv"/>
@@ -87,5 +94,6 @@
     <resources>
         <image name="Book" width="124.5" height="200.5"/>
         <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>
