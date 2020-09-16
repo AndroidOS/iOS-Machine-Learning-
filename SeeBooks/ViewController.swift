@@ -19,6 +19,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     let imagePicker = UIImagePickerController()
     var classificationResults : [VNClassificationObservation] = []
+    
+     var text = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +47,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.classificationResults = results
         DispatchQueue.main.async {
             self.navigationItem.title = "Results"
-            self.lblResult.text = "\(results[0].identifier)\n\(results[1].identifier)\n\(results[2].identifier)\n"
+            self.text="\(results[0].identifier)\n\(results[1].identifier)\n\(results[2].identifier)\n"
+            self.lblResult.text = self.text
             self.activityIndicator.stopAnimating()
             self.activityIndicator.isHidden = true
         }
@@ -88,6 +91,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBAction func btnShare(_ sender: UIBarButtonItem) {
         print("Share Button pressed")
+       
+                 // set up activity view controller
+                 let textToShare = [ text ]
+                 let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+                 activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        
+                 self.present(activityViewController, animated: true, completion: nil)
     }
 }
 
