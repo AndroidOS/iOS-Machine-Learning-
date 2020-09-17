@@ -17,6 +17,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    
+    @IBOutlet weak var btnShareProp: UIBarButtonItem!
+    
     let imagePicker = UIImagePickerController()
     var classificationResults : [VNClassificationObservation] = []
     
@@ -25,7 +28,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        
+        btnShareProp.isEnabled = false
     }
     
     func detect(image: CIImage){ //
@@ -51,6 +54,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.lblResult.text = self.text
             self.activityIndicator.stopAnimating()
             self.activityIndicator.isHidden = true
+            self.btnShareProp.isEnabled = true
         }
       
     }
