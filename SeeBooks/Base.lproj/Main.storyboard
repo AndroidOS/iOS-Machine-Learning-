@@ -62,6 +62,11 @@
                                     <action selector="btnShare:" destination="BYZ-38-t0r" id="WiV-iX-yU4"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem title="PDF" id="ilO-xL-UiB">
+                                <connections>
+                                    <action selector="btnPDF:" destination="BYZ-38-t0r" id="WER-bL-tLu"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>

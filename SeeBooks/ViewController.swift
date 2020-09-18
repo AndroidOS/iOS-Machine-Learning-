@@ -103,6 +103,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
                  self.present(activityViewController, animated: true, completion: nil)
     }
+    
+    
+    @IBAction func btnPDF(_ sender: UIBarButtonItem) {
+    }
 }
 
 
