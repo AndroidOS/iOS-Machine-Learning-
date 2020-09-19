@@ -60,6 +60,7 @@
                             <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="CGa-tj-wlz">
                                 <connections>
                                     <action selector="btnShare:" destination="BYZ-38-t0r" id="WiV-iX-yU4"/>
+                                    <segue destination="jXT-M5-XrI" kind="show" id="2p5-dc-goJ"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="PDF" id="ilO-xL-UiB">
@@ -79,6 +80,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--PDF-->
+        <scene sceneID="ZoS-BF-0aV">
+            <objects>
+                <viewController id="jXT-M5-XrI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PPd-qA-cEi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NcH-A0-iAX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PDF" id="rrt-vu-cqh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q73-BI-UZx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2028" y="202"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JHw-es-WFp">

@@ -15,6 +15,7 @@
 		BE78D2202502F78500472BF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE78D21F2502F78500472BF1 /* Assets.xcassets */; };
 		BE78D2232502F78500472BF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE78D2212502F78500472BF1 /* LaunchScreen.storyboard */; };
 		BE78D22E2502F78500472BF1 /* SeeBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE78D22D2502F78500472BF1 /* SeeBooksTests.swift */; };
+		BE7C9DFF2516AF0E00307E6D /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C9DFE2516AF0E00307E6D /* PDFViewController.swift */; };
 		BE9BFDA4250D7A7200239FBE /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BE9BFDA3250D7A7200239FBE /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		BE78D2292502F78500472BF1 /* SeeBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeeBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE78D22D2502F78500472BF1 /* SeeBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeBooksTests.swift; sourceTree = "<group>"; };
 		BE78D22F2502F78500472BF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE7C9DFE2516AF0E00307E6D /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		BE9BFDA3250D7A7200239FBE /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		BEA06BF2250593D4006CF12E /* SeeBooks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SeeBooks.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 				BE78D2212502F78500472BF1 /* LaunchScreen.storyboard */,
 				BE78D2242502F78500472BF1 /* Info.plist */,
 				BE78D21C2502F78200472BF1 /* SeeBooks.xcdatamodeld */,
+				BE7C9DFE2516AF0E00307E6D /* PDFViewController.swift */,
 			);
 			path = SeeBooks;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				BE9BFDA4250D7A7200239FBE /* Inceptionv3.mlmodel in Sources */,
 				BE78D21E2502F78200472BF1 /* SeeBooks.xcdatamodeld in Sources */,
 				BE78D2182502F78200472BF1 /* ViewController.swift in Sources */,
+				BE7C9DFF2516AF0E00307E6D /* PDFViewController.swift in Sources */,
 				BE78D2142502F78200472BF1 /* AppDelegate.swift in Sources */,
 				BE78D2162502F78200472BF1 /* SceneDelegate.swift in Sources */,
 			);
