@@ -106,6 +106,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBAction func btnPDF(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "showPDF", sender: nil)
     }
 }
 

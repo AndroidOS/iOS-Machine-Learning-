@@ -60,7 +60,7 @@
                             <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="CGa-tj-wlz">
                                 <connections>
                                     <action selector="btnShare:" destination="BYZ-38-t0r" id="WiV-iX-yU4"/>
-                                    <segue destination="jXT-M5-XrI" kind="show" id="2p5-dc-goJ"/>
+                                    <segue destination="jXT-M5-XrI" kind="show" identifier="showPDF" id="2p5-dc-goJ"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="PDF" id="ilO-xL-UiB">
@@ -84,7 +84,7 @@
         <!--PDF-->
         <scene sceneID="ZoS-BF-0aV">
             <objects>
-                <viewController id="jXT-M5-XrI" sceneMemberID="viewController">
+                <viewController id="jXT-M5-XrI" customClass="PDFViewController" customModule="SeeBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PPd-qA-cEi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
