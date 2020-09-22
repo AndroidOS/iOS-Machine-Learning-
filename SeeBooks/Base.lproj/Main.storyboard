@@ -88,14 +88,30 @@
                     <view key="view" contentMode="scaleToFill" id="PPd-qA-cEi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2ci-Cy-FkY">
+                                <rect key="frame" x="0.0" y="824" width="143" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2ci-Cy-FkY" secondAttribute="height" multiplier="143:72" id="ZMQ-Nb-8hB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NcH-A0-iAX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2ci-Cy-FkY" firstAttribute="leading" secondItem="NcH-A0-iAX" secondAttribute="leading" id="Giv-kC-g21"/>
+                            <constraint firstItem="NcH-A0-iAX" firstAttribute="trailing" secondItem="2ci-Cy-FkY" secondAttribute="trailing" constant="271" id="NwC-5B-pAc"/>
+                            <constraint firstAttribute="bottom" secondItem="2ci-Cy-FkY" secondAttribute="bottom" id="doX-cy-5aZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="PDF" id="rrt-vu-cqh"/>
+                    <connections>
+                        <outlet property="imgTest" destination="2ci-Cy-FkY" id="BZw-7y-Uq0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q73-BI-UZx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2028" y="202"/>
+            <point key="canvasLocation" x="2027.5362318840582" y="201.5625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JHw-es-WFp">

@@ -14,20 +14,23 @@ class PDFViewController: UIViewController {
     public var documentData: Data?
     public var docInfo: Result? = nil
 
+    @IBOutlet weak var imgTest: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        imgTest.image = docInfo?.pic
+        print("\(docInfo?.itemDesc)")
         let pdfView = PDFView()
 
         pdfView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(pdfView)
-
-        pdfView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        pdfView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        pdfView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        pdfView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        
+//        view.addSubview(pdfView)
+//
+//        pdfView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+//        pdfView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+//        pdfView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+//        pdfView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+//
         if let data = documentData {
           pdfView.document = PDFDocument(data: data)
           pdfView.autoScales = true
@@ -37,8 +40,8 @@ class PDFViewController: UIViewController {
         
         let pdfData = createPDF()
         
-        pdfView.document = PDFDocument(data: pdfData)
-        pdfView.autoScales = true
+        // pdfView.document = PDFDocument(data: pdfData)
+        //pdfView.autoScales = true
         
         let resourceDocPath = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)).last! as URL
         let pdfNameFromUrl = "RetroCollector - myPdf.pdf"
