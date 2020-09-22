@@ -12,7 +12,9 @@ import PDFKit
 class PDFViewController: UIViewController {
     
     public var documentData: Data?
+    public var docInfo: Result? = nil
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
