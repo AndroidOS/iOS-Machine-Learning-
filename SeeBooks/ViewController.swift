@@ -20,7 +20,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var btnShareProp: UIBarButtonItem!
     
-    var docInfo: Result? = nil
+    var docInfo = Result(pic: UIImage(named: "Book")!,itemDesc: "")
     
     let imagePicker = UIImagePickerController()
     var classificationResults : [VNClassificationObservation] = []
@@ -31,8 +31,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         imagePicker.delegate = self
         btnShareProp.isEnabled = false
-        docInfo?.pic = UIImage(named: "Book")!;
-        docInfo?.itemDesc = "test"
+        docInfo.pic = UIImage(named: "Book")!;
+        docInfo.itemDesc = "test"
+        print("\(docInfo.itemDesc)")
     }
     
     func detect(image: CIImage){ //
@@ -52,7 +53,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
        print("\(topResult)")
             print("detect ")
             self.classificationResults = results
-        self.docInfo?.itemDesc = "\(results[0].identifier)"
+        self.docInfo.itemDesc = "\(results[0].identifier)"
         DispatchQueue.main.async {
             self.navigationItem.title = "Results"
             self.text="\(results[0].identifier)\n\(results[1].identifier)\n\(results[2].identifier)\n"
@@ -80,7 +81,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let image = info[.originalImage] as? UIImage {
                    imagePicker.dismiss(animated: true, completion: nil)
                    imageView.image = image
-            docInfo?.pic = UIImage(named: "Book")!;
+            docInfo.pic = UIImage(named: "Book")!;
                    //imagePicker.dismiss(animated: true, completion: nil)
                    guard let ciImage = CIImage(image: image) else {
                        fatalError("couldn't convert uiimage to CIImage")
@@ -117,7 +118,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showPDF") {
-            
+            //print("\(docInfo?.itemDesc)")
            print("showPDF Segue")
             
             if let pdfViewController = segue.destination as? PDFViewController {
