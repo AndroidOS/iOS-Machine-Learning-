@@ -81,8 +81,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let image = info[.originalImage] as? UIImage {
                    imagePicker.dismiss(animated: true, completion: nil)
                    imageView.image = image
-            docInfo.pic = UIImage(named: "Book")!;
+            //docInfo.pic = UIImage(named: "Book")!;
                    //imagePicker.dismiss(animated: true, completion: nil)
+                    docInfo.pic = image
                    guard let ciImage = CIImage(image: image) else {
                        fatalError("couldn't convert uiimage to CIImage")
                    }

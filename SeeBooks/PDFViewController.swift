@@ -24,13 +24,13 @@ class PDFViewController: UIViewController {
         let pdfView = PDFView()
 
         pdfView.translatesAutoresizingMaskIntoConstraints = false
-//        view.addSubview(pdfView)
-//
-//        pdfView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-//        pdfView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-//        pdfView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-//        pdfView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-//
+        view.addSubview(pdfView)
+
+        pdfView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        pdfView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        pdfView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        pdfView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+
         if let data = documentData {
           pdfView.document = PDFDocument(data: data)
           pdfView.autoScales = true
@@ -87,8 +87,11 @@ class PDFViewController: UIViewController {
         
         let headIng = "Model Results Details"
         headIng.draw(at: CGPoint(x: 70, y: 0), withAttributes: attribHead)
-        let text = "Results "
+        let text = "\(docInfo?.itemDesc)"
         text.draw(at: CGPoint(x: 10, y: 100), withAttributes: attributes)
+        
+//        let imagePosition = CGRect(x: 0, y: 0, width: 50, height: 50)
+//        docInfo?.pic.draw(in: imagePosition)
       }
 
       return data
