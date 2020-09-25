@@ -20,7 +20,7 @@ class PDFViewController: UIViewController {
         super.viewDidLoad()
 
         imgTest.image = docInfo?.pic
-        print("\(docInfo?.itemDesc)")
+        print("PDF txt \(docInfo?.itemDesc)")
         let pdfView = PDFView()
 
         pdfView.translatesAutoresizingMaskIntoConstraints = false
@@ -40,8 +40,8 @@ class PDFViewController: UIViewController {
         
         let pdfData = createPDF()
         
-        // pdfView.document = PDFDocument(data: pdfData)
-        //pdfView.autoScales = true
+         pdfView.document = PDFDocument(data: pdfData)
+        pdfView.autoScales = true
         
         let resourceDocPath = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)).last! as URL
         let pdfNameFromUrl = "RetroCollector - myPdf.pdf"
@@ -90,8 +90,8 @@ class PDFViewController: UIViewController {
         let text = "\(docInfo?.itemDesc)"
         text.draw(at: CGPoint(x: 10, y: 100), withAttributes: attributes)
         
-//        let imagePosition = CGRect(x: 0, y: 0, width: 50, height: 50)
-//        docInfo?.pic.draw(in: imagePosition)
+        let imagePosition = CGRect(x: 0, y: 300, width: 400, height: 400)
+        docInfo?.pic.draw(in: imagePosition)
       }
 
       return data
