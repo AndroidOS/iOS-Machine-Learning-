@@ -44,7 +44,7 @@ class PDFViewController: UIViewController {
         pdfView.autoScales = true
         
         let resourceDocPath = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)).last! as URL
-        let pdfNameFromUrl = "RetroCollector - myPdf.pdf"
+        let pdfNameFromUrl = "SeeBooks - myPdf.pdf"
         let actualPath = resourceDocPath.appendingPathComponent(pdfNameFromUrl)
         do {
             try pdfData.write(to: actualPath, options: .atomic)
@@ -99,7 +99,39 @@ class PDFViewController: UIViewController {
     
     @IBAction func btnShare(_ sender: UIBarButtonItem) {
         print("PDF Share button pressed")
+        
+        var pdfURL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)).last! as URL
+               pdfURL = pdfURL.appendingPathComponent( "SeeBooks - myPdf.pdf") as URL
+        
+        //let data = try! Data(contentsOf: pdfURL)
+
+        //let docu = PDFDocument(data: data)
+        
+        do {
+            //let data = try Data(contentsOf: pdfURL)
+
+            //try data.write(to: url as URL)
+
+            let activitycontroller = UIActivityViewController(activityItems: [pdfURL], applicationActivities: nil)
+            if activitycontroller.responds(to: #selector(getter: activitycontroller.completionWithItemsHandler))
+            {
+                activitycontroller.completionWithItemsHandler = {(type, isCompleted, items, error) in
+                    if isCompleted
+                    {
+                        print("completed")
+                    }
+                }
+            }
+
+            activitycontroller.excludedActivityTypes = [UIActivity.ActivityType.airDrop]
+            activitycontroller.popoverPresentationController?.sourceView = self.view
+            self.present(activitycontroller, animated: true, completion: nil)
+
+        }
+
     }
+    
+    
     
     /*
     // MARK: - Navigation
