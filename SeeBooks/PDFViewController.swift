@@ -87,17 +87,20 @@ class PDFViewController: UIViewController {
         
         let headIng = "Model Results Details"
         headIng.draw(at: CGPoint(x: 70, y: 0), withAttributes: attribHead)
-        let text = "\(docInfo?.itemDesc)"
-        text.draw(at: CGPoint(x: 10, y: 100), withAttributes: attributes)
-        
-        let imagePosition = CGRect(x: 0, y: 300, width: 400, height: 400)
+        if let text = docInfo?.itemDesc {
+            text.draw(at: CGPoint(x: 10, y: 100), withAttributes: attributes)
+        }
+        let imagePosition = CGRect(x: 0, y: 200, width: 400, height: 600)
         docInfo?.pic.draw(in: imagePosition)
       }
 
       return data
     }
     
-
+    @IBAction func btnShare(_ sender: UIBarButtonItem) {
+        print("PDF Share button pressed")
+    }
+    
     /*
     // MARK: - Navigation
 

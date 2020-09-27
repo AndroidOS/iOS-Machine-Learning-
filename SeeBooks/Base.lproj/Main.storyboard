@@ -104,7 +104,13 @@
                             <constraint firstAttribute="bottom" secondItem="2ci-Cy-FkY" secondAttribute="bottom" id="doX-cy-5aZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="PDF" id="rrt-vu-cqh"/>
+                    <navigationItem key="navigationItem" title="PDF" id="rrt-vu-cqh">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="mQf-o4-Vu3">
+                            <connections>
+                                <action selector="btnShare:" destination="jXT-M5-XrI" id="pFc-Xh-o2D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imgTest" destination="2ci-Cy-FkY" id="BZw-7y-Uq0"/>
                     </connections>
