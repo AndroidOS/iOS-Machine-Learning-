@@ -74,6 +74,7 @@
                         <outlet property="activityIndicator" destination="pRy-BR-UnH" id="2dc-Vx-otv"/>
                         <outlet property="btnShareProp" destination="CGa-tj-wlz" id="pU0-VR-Unj"/>
                         <outlet property="imageView" destination="0zy-Jk-Pnt" id="xTS-gz-EZL"/>
+                        <outlet property="lblPDFbutton" destination="ilO-xL-UiB" id="78r-sy-uPH"/>
                         <outlet property="lblResult" destination="JHG-so-600" id="Mek-Zm-HGd"/>
                     </connections>
                 </viewController>

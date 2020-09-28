@@ -17,6 +17,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var lblPDFbutton: UIBarButtonItem!
     
     @IBOutlet weak var btnShareProp: UIBarButtonItem!
     
@@ -34,6 +35,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         docInfo.pic = UIImage(named: "Book")!;
         docInfo.itemDesc = "test"
         print("\(docInfo.itemDesc)")
+        lblPDFbutton.isEnabled = false
     }
     
     func detect(image: CIImage){ //
@@ -61,6 +63,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.activityIndicator.stopAnimating()
             self.activityIndicator.isHidden = true
             self.btnShareProp.isEnabled = true
+            self.lblPDFbutton.isEnabled = true
         }
       
     }
