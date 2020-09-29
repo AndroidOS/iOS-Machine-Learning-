@@ -88,18 +88,13 @@
 		BE78D2122502F78200472BF1 /* SeeBooks */ = {
 			isa = PBXGroup;
 			children = (
+				BE7ADF812523CBB00028E07F /* Model */,
+				BE7ADF802523CB4D0028E07F /* Controller */,
+				BE7ADF7F2523CB380028E07F /* View */,
 				BEA06BF2250593D4006CF12E /* SeeBooks.entitlements */,
 				BE78D2132502F78200472BF1 /* AppDelegate.swift */,
 				BE78D2152502F78200472BF1 /* SceneDelegate.swift */,
-				BE78D2172502F78200472BF1 /* ViewController.swift */,
-				BE78D2192502F78200472BF1 /* Main.storyboard */,
-				BE78D21F2502F78500472BF1 /* Assets.xcassets */,
-				BE78D2212502F78500472BF1 /* LaunchScreen.storyboard */,
-				BE598405251988DA00EBD648 /* Inceptionv3.mlmodel */,
 				BE78D2242502F78500472BF1 /* Info.plist */,
-				BE78D21C2502F78200472BF1 /* SeeBooks.xcdatamodeld */,
-				BE7C9DFE2516AF0E00307E6D /* PDFViewController.swift */,
-				BE7F8389251986AA00449E77 /* Result.swift */,
 			);
 			path = SeeBooks;
 			sourceTree = "<group>";
@@ -111,6 +106,35 @@
 				BE78D22F2502F78500472BF1 /* Info.plist */,
 			);
 			path = SeeBooksTests;
+			sourceTree = "<group>";
+		};
+		BE7ADF7F2523CB380028E07F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE78D2212502F78500472BF1 /* LaunchScreen.storyboard */,
+				BE78D21F2502F78500472BF1 /* Assets.xcassets */,
+				BE78D2192502F78200472BF1 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE7ADF802523CB4D0028E07F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE7C9DFE2516AF0E00307E6D /* PDFViewController.swift */,
+				BE78D2172502F78200472BF1 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE7ADF812523CBB00028E07F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE7F8389251986AA00449E77 /* Result.swift */,
+				BE598405251988DA00EBD648 /* Inceptionv3.mlmodel */,
+				BE78D21C2502F78200472BF1 /* SeeBooks.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
